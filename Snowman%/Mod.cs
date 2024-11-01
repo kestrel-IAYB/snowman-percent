@@ -26,7 +26,7 @@ namespace Snowman_
     public class PatchSnowman
     {
         [HarmonyPostfix]
-        public static async void Postfix() {
+        public static void Postfix() {
             float time = GameManager.instance.levelController.GetCombatTimer().GetTime();
             GameManager.instance.player.GetHUD().GetNotificationPopUp().TriggerPopUp($"Snowman%: {time:0.00}", HUDNotificationPopUp.ThreatLevel.High);
         }
